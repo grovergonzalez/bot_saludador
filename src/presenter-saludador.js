@@ -6,6 +6,8 @@ const form = document.querySelector("#Saludar-form");
 const div = document.querySelector("#saludar-div");
 const genero = document.querySelector("#genero")
 const edad = document.querySelector("#edad");
+const idioma = document.querySelector("#idioma");
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -13,6 +15,6 @@ form.addEventListener("submit", (event) => {
   let fechaActual = new Date();
   let horaActual = fechaActual.getHours();
 
-  div.innerHTML = "<p>" + verificarHora(nombre.value, edad.value, genero.value, horaActual) + "<p>";
+  div.innerHTML = "<p>" + verificarHora(nombre.value, edad.value, genero.value, horaActual, idioma.value) + "<p>";
 
 });
