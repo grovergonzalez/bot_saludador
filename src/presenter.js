@@ -1,10 +1,20 @@
+import verificarHora from "./VerificarHora";
 
-const cantItems = document.querySelector("#cantidad");
-const form = document.querySelector("#Mostrar-form");
-const div = document.querySelector("#Mostrar");
+
+const nombre = document.querySelector("#nombre");
+const form = document.querySelector("#Saludar-form");
+const div = document.querySelector("#saludar-div");
+const genero = document.querySelector("#genero")
+const edad = document.querySelector("#edad");
+const idioma = document.querySelector("#idioma");
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  div.innerHTML = "Cantidad de items: " + cantItems.value ;
+  let fechaActual = new Date();
+  let horaActual = fechaActual.getHours();
+
+  div.innerHTML = "<p>" + verificarHora(nombre.value, edad.value, genero.value, horaActual, idioma.value) + "<p>";
+
 });

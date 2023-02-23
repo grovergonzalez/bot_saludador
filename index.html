@@ -1,12 +1,28 @@
-<html>
-  <body>
-    <h1>VENTA - TOTALIZADOR</h1>
-    <form id="Mostrar-form">
-      <label for="Cant-item">Cantidad de item:</label>
-      <input type="number" id="cantidad" />
-      <input type="submit" value="Mostrar" id="mostrar-button" />
-    </form>
-    <div id="Mostrar"></div>
-    <script type="module" src="./src/presenter.js"></script>   
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Saludador</title>
+</head>
+<body>
+    <div id="Saludar-Nombre">
+        <form id="Saludar-form">
+        <label for="Nombre">Ingresa tu nombre: </label>
+        <input type="text" id="nombre">
+        <label for="Edad">Ingresa tu edad: </label>
+        <input type="number" id="edad">
+        <label for="Genero">Ingresa tu Genero: </label>
+        <input type="text" id="genero">
+        <input type="submit" value="Saludar" id="saludar-button">
+        </form>
+        <select name="idioma" id="idioma">
+            <option value="ES">ES</option>
+            <option value="EN">EN</option>
+        </select>
+        <div id="saludar-div"></div>
+        <script type="module" src="./src/presenter.js"></script>
+    </div>
+</body>
 </html>
